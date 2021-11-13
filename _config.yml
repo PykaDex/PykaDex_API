@@ -1,6 +1,6 @@
 title: PykaDex API
 logo: /assets/icon.png
 description: Gotta classify em all.
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
