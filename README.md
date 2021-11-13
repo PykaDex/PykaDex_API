@@ -1,3 +1,3 @@
 # PykaDex API
 
-A PykaDex repository for an API that allows model testing
+A [PykaDex](https://github.com/PykaDex) repository for an API that allows model testing
