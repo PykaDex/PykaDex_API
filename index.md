@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Upload an Image to the PykaDex
 
 
 <p>Click on the "Choose File" button to upload a file:</p>
