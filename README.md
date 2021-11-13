@@ -1,4 +1,4 @@
-<img src="assets/icon.png" width="40" height="50">
+<img src="assets/icon.png" width="50" height="50">
 
 # PykaDex API
 
