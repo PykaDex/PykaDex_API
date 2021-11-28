@@ -29,6 +29,5 @@ if uploaded_image is not None:
 
     if submit_button:
         with st.spinner('Model working....'):
-            predictions = get_prediction(image)
+            predictions = get_prediction(uploaded_image)
             st.markdown(predictions)
-
