@@ -24,8 +24,8 @@ def net(model_path):
 def image_predictor(net,image, IMG_SIZE):
 	'''
     '''
-	#img = cv2.imread(image)
-	img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+	img = cv2.imread(image)
+	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 	img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
 	X = torch.Tensor(img).view(-1,3,IMG_SIZE ,IMG_SIZE )
 	X = X/255.0
