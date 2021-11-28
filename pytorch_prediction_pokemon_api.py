@@ -11,11 +11,11 @@ def net(model_path):
     '''
 	model = torchvision.models.vgg16(pretrained=True)
 
-	# for param in model.parameters():
-	# 	param.requires_grad = False
+	for param in model.parameters():
+		param.requires_grad = False
 
-	# model.features[0] = nn.Conv2d(3,64,kernel_size=(3,3), stride=(1,1), padding=(1,1))
-	# model.classifier[6] = nn.Linear(4096,3)
+	model.features[0] = nn.Conv2d(3,64,kernel_size=(3,3), stride=(1,1), padding=(1,1))
+	model.classifier[6] = nn.Linear(4096,3)
 
 	# model.load_state_dict(torch.load(model_path))
 
