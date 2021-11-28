@@ -1,3 +1,4 @@
+*.pth
 #Ignore Sudi's weird python files
 ._*
 
