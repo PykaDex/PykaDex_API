@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 import numpy as np
 from pytorch_prediction_pokemon_api import get_prediction
 
