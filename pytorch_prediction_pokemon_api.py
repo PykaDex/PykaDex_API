@@ -21,10 +21,10 @@ def net(model_path):
 
 	return model
 
-def image_predictor(net,image_path, IMG_SIZE):
+def image_predictor(net,image, IMG_SIZE):
 	'''
     '''
-	img = cv2.imread(image_path)
+	img = cv2.imread(image)
 	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 	img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
 	X = torch.Tensor(img).view(-1,3,IMG_SIZE ,IMG_SIZE )
@@ -48,7 +48,7 @@ def get_prediction(image_path):
 
     pokemon = list_of_Pokemon
     model = net(model_path)
-    X, predicted_class, confidence = image_predictor(net,image_path, IMG_SIZE)
+    X, predicted_class, confidence = image_predictor(net,uploaded_file, IMG_SIZE)
     prediction = f"It's a {pokemon[predicted_class]} with a confidence of {confidence}%"
     
     return prediction
