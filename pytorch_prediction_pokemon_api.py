@@ -45,7 +45,7 @@ def image_predictor(model,pil_image, IMG_SIZE):
 		confidence = torch.round(probabilities[predicted_class]*100)
 	return X, predicted_class, confidence
 
-def get_prediction(image):
+def get_prediction(pil_image):
     """
     """
     model_path = "Model/test_model.pth"
@@ -53,7 +53,7 @@ def get_prediction(image):
 
     pokemon = list_of_Pokemon
     model = net(model_path)
-    X, predicted_class, confidence = image_predictor(net,image, IMG_SIZE)
+    X, predicted_class, confidence = image_predictor(model,pil_image, IMG_SIZE)
     prediction = f"It's a {pokemon[predicted_class]} with a confidence of {confidence}%"
     
     return prediction
