@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as nnf
 from pathlib import PurePath
 from Model.test_model_pokemon_list import list_of_Pokemon
+import numpy as np
 
 def net(model_path):
 	''' 
@@ -21,10 +22,14 @@ def net(model_path):
 
 	return model
 
-def image_predictor(net,image, IMG_SIZE):
+def image_predictor(net,pil_image, IMG_SIZE):
 	'''
     '''
-	img = cv2.imread(image)
+	open_cv_image = np.array(pil_image) 
+	# Convert RGB to BGR 
+	img = open_cv_image[:, :, ::-1].copy() 
+	
+	#img = cv2.imread(image)
 	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 	img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
 	X = torch.Tensor(img).view(-1,3,IMG_SIZE ,IMG_SIZE )
