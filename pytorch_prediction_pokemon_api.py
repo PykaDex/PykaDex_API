@@ -22,7 +22,7 @@ def net(model_path):
 
 	return model
 
-def image_predictor(net,pil_image, IMG_SIZE):
+def image_predictor(model,pil_image, IMG_SIZE):
 	'''
     '''
 	open_cv_image = np.array(pil_image) 
