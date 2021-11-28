@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pytorch_prediction_pokemon_api.py import get_prediction
+from pytorch_prediction_pokemon_api import get_prediction
 
 
 ##########################################
